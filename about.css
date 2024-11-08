@@ -1,0 +1,259 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #0a0a0a;
+  overflow-x: hidden;
+}
+
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 1000;
+  transition: top 0.2s ease-in-out;
+}
+
+.navbar.scrolled {
+  top: -100px;
+}
+
+/* Center logo styling */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 120px;
+  position: relative;
+  top: 10px;
+}
+
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 1000;
+  transition: top 0.2s ease-in-out;
+}
+
+.navbar.scrolled {
+  top: -100px;
+}
+
+/* Center logo styling */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 120px;
+  position: relative;
+  top: 10px;
+}
+
+/* Navigation links with left and right alignment */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  max-width: 900px;
+  justify-content: space-between;
+  margin: 0 auto ;
+}
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-left {
+  margin-right: auto;
+  gap: 100px; /* Adjust spacing between left links */
+}
+
+.nav-links-right {
+  margin-left: auto;
+  gap: 100px; /* Adjust spacing between right links */
+}
+
+/* Link styling */
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Hover effect for links */
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  animation: underline 0.3s ease-in-out forwards;
+}
+
+/* Underline animation */
+@keyframes underline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Section styling */
+section {
+  position: relative;
+  padding: 80px 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin-bottom: 100px;
+  height: 100vh;
+  z-index: 2; /* Ensure sections appear above the background */
+}
+
+/* Overview section (zoom-in effect) */
+.overview {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 200px 200px 0;
+  position: relative;
+  z-index: 1;
+  transform: scale(1.15); /* Slightly bigger initially */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  width: 100%;
+  max-width: 90%;
+  margin-right: 10%;
+  margin-top: 120px; /* Offset the section below the navbar */
+  height: 70vh; /* Smaller height for Overview */
+}
+
+.overview.active {
+  transform: scale(1); /* Smooth zoom-in to normal size */
+  opacity: 1;
+}
+
+/* Institution section (zoom-in effect) */
+.institution {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 200px 0 0 200px ;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(1.15); /* Slightly bigger initially */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  width: 100%;
+  max-width: 90%;
+  margin-left: 10%; /* Space from the left */
+  height: 130vh; /* Larger height for Institution */
+}
+
+.institution.active {
+  opacity: 1; /* Fade-in effect */
+  transform: scale(1); /* Zoom-in to normal size */
+}
+
+/* Content container styling */
+.content-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #52e8f0;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Image styling */
+.institution img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 25px;
+}
+
+footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.767);
+  width: 70%;
+  margin: 8px auto;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.767);
+}
+
+/* Background canvas styling */
+#threejs-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind sections */
+}

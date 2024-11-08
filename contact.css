@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background: transparent; /* Ensure transparent to show Three.js background */
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevents horizontal scroll due to background animation */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1; /* Ensure content is above the Three.js background */
+}
+
+/* Three.js Background */
+#threejs-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place it behind all other elements */
+}
+
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 1000;
+  transition: top 0.2s ease-in-out;
+}
+
+.navbar.scrolled {
+  top: -100px;
+}
+
+/* Center logo styling */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 120px;
+  position: relative;
+  top: 10px;
+}
+
+/* Navigation links with left and right alignment */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  max-width: 900px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-left {
+  margin-right: auto;
+  gap: 100px; /* Adjust spacing between left links */
+}
+
+.nav-links-right {
+  margin-left: auto;
+  gap: 100px; /* Adjust spacing between right links */
+}
+
+/* Link styling */
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Hover effect for links */
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  animation: underline 0.3s ease-in-out forwards;
+}
+
+/* Underline animation */
+@keyframes underline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Contact Section */
+.contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+  background: transparent;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+/* Team Container Styling */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Adjusts the space between team members */
+  padding: 40px 20px;
+}
+
+/* Team Member Card Styling */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 25px;
+}
+
+footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.767);
+  width: 70%;
+  margin: 8px auto;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.767);
+}
+

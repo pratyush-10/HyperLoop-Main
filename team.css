@@ -1,0 +1,239 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: linear-gradient(-45deg, #131313, #000916, #000000, #979797);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 10% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 10% 50%; }
+  }
+  
+  /* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  z-index: 1000;
+  transition: top 0.2s ease-in-out;
+}
+
+.navbar.scrolled {
+  top: -100px;
+}
+
+/* Center logo styling */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 120px;
+  position: relative;
+  top: 10px;
+}
+
+/* Navigation links with left and right alignment */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  max-width: 900px;
+  justify-content: space-between;
+  margin: 0 auto ;
+}
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-left {
+  margin-right: auto;
+  gap: 100px; /* Adjust spacing between left links */
+}
+
+.nav-links-right {
+  margin-left: auto;
+  gap: 100px; /* Adjust spacing between right links */
+}
+
+/* Link styling */
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Hover effect for links */
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  animation: underline 0.3s ease-in-out forwards;
+}
+
+/* Underline animation */
+@keyframes underline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+  
+  /* Faculty Coordinator Section */
+  .faculty-coordinator {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 120px auto 40px; /* Margin adjusted to avoid overlap with navbar */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .faculty-coordinator img {
+    width: 220px;
+    height: 220px;
+    border-radius: 0%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #333;
+  }
+  
+  .faculty-coordinator .faculty-details {
+    color: #ccc;
+  }
+  
+  .faculty-coordinator h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .faculty-coordinator p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.5;
+  }
+  
+  /* Team Section */
+  .team-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px 20px;
+  }
+  
+  .team-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+  
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+  }
+  
+  .team-member {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Animation for scroll effect */
+  .team-member {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .team-member.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  h2 {
+    padding: 50px 80px;
+  }
+  /* Footer */
+footer {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 25px;
+}
+
+footer hr {
+  border: 1px solid rgba(255, 255, 255, 0.767);
+  width: 70%;
+  margin: 8px auto;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.767);
+}
