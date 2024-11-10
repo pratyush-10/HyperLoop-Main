@@ -189,7 +189,7 @@ footer p {
 /* Media Queries for responsiveness */
 
 /* For Mobile Phones and Tablets */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack navbar items vertically */
     align-items: center;
