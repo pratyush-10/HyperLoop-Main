@@ -187,13 +187,20 @@ footer p {
 }
 
 /* Media Queries for responsiveness */
-@media (max-width: 1200px) {
-  .nav-links {
-    max-width: 700px;
-  }
 
+/* Tablet and smaller screens */
+@media (max-width: 1200px) {
   .navbar {
     padding: 10px 30px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .nav-links-left,
+  .nav-links-right {
+    gap: 40px; /* Adjusted gap between links */
   }
 
   .hero-text h1 {
@@ -203,59 +210,35 @@ footer p {
   .hero-text p {
     font-size: 1.2rem;
   }
+
+  footer p {
+    font-size: 0.8em;
+  }
 }
 
+/* For Mobile Phones */
 @media (max-width: 900px) {
   .navbar {
     padding: 10px 20px;
   }
 
-  .nav-links-left,
-  .nav-links-right {
-    gap: 60px; /* Adjust for medium screens */
-  }
-
-  .logo img {
-    width: 100px;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-
-  footer p {
-    font-size: 0.8em;
-  }
-
-  .social-media img {
-    width: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    padding: 10px 15px;
-    flex-direction: column; /* Stack the navbar items */
-  }
-
   .nav-links {
     flex-direction: column;
-    gap: 20px;
-    text-align: center;
+    align-items: center;
+    gap: 20px; /* Stacked links on mobile */
   }
 
   .nav-links-left,
   .nav-links-right {
     margin-left: 0;
     margin-right: 0;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
   }
 
   .logo img {
-    width: 80px;
+    width: 80px; /* Reduced logo size on mobile */
   }
 
   .hero {
@@ -263,7 +246,7 @@ footer p {
   }
 
   .hero-text h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 15px;
   }
 
@@ -281,5 +264,53 @@ footer p {
 
   footer p {
     font-size: 0.75em;
+  }
+
+  .social-media img {
+    width: 20px;
+  }
+}
+
+/* For Small Mobile Phones */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-direction: column; /* Stack navbar items */
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 70px; /* Further reduced logo size */
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem; /* Smaller heading size on small phones */
+    margin-bottom: 10px;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer hr {
+    width: 90%;
+  }
+
+  footer p {
+    font-size: 0.7em;
+  }
+
+  .social-media img {
+    width: 18px;
   }
 }
