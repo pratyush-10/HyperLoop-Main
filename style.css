@@ -188,70 +188,55 @@ footer p {
 
 /* Media Queries for responsiveness */
 
-/* Tablet and smaller screens */
-@media (max-width: 1200px) {
-  .navbar {
-    padding: 10px 30px;
-  }
-
-  .logo img {
-    width: 100px;
-  }
-
-  .nav-links-left,
-  .nav-links-right {
-    gap: 40px; /* Adjusted gap between links */
-  }
-
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-text p {
-    font-size: 1.2rem;
-  }
-
-  footer p {
-    font-size: 0.8em;
-  }
-}
-
-/* For Mobile Phones */
+/* For Mobile Phones and Tablets */
 @media (max-width: 900px) {
   .navbar {
     padding: 10px 20px;
   }
 
+  .logo img {
+    width: 100px; /* Adjust logo size on mobile */
+  }
+
   .nav-links {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Stacked links on mobile */
+    gap: 20px; /* Stack links vertically */
+    width: 100%;
   }
 
   .nav-links-left,
   .nav-links-right {
-    margin-left: 0;
-    margin-right: 0;
-    justify-content: center;
     width: 100%;
-    gap: 20px;
+    justify-content: center; /* Center the left and right links */
+    gap: 20px; /* Adjust gap between links */
   }
 
-  .logo img {
-    width: 80px; /* Reduced logo size on mobile */
+  .nav-links-left {
+    margin-right: 0;
   }
 
-  .hero {
-    background-position: center center;
+  .nav-links-right {
+    margin-left: 0;
+  }
+
+  .nav-links li {
+    list-style: none;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px 0; /* Increased padding for better touch target */
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
   }
 
   .hero-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   footer {
@@ -290,12 +275,12 @@ footer p {
   }
 
   .hero-text h1 {
-    font-size: 1.5rem; /* Smaller heading size on small phones */
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
 
   .hero-text p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   footer {
