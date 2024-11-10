@@ -247,6 +247,13 @@ footer p {
     align-items: center;
     gap: 15px;
     margin: 0;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: 10;
   }
 
   .nav-links-left, .nav-links-right {
@@ -276,3 +283,4 @@ footer p {
     font-size: 0.75em;
   }
 }
+  
