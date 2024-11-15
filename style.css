@@ -120,6 +120,7 @@ body {
   background: url('BG.png') no-repeat center center/cover;
   background-position: 48% center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -131,13 +132,23 @@ body {
   font-size: 4rem;
   margin-bottom: -10px;
   text-transform: uppercase;
+  background: linear-gradient(to right, #c6c6c6, #ffffff, #ffffff, #ffffff, #c6c6c6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -2px 2px 10px rgba(0, 0, 0, 0);
+}
+
+.hero-text-2 h1 {
+  font-size: 4rem;
+  margin-bottom: -10px;
+  text-transform: uppercase;
   background: linear-gradient(to right, #000000, #a0a0a0, #ffffff, #ffffff, #ffffff, #a0a0a0, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: -2px 2px 10px rgba(0, 0, 0, 0);
 }
 
-.hero-text p {
+.hero-text-2 p {
   margin-top: 10px;
   font-size: 1.5rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -153,6 +164,11 @@ body {
 }
 
 .hero-text {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-text-2 {
   position: relative;
   z-index: 2;
 }
@@ -226,7 +242,7 @@ footer hr {
 }
 
 /* Mobile and Tablet Media Queries */
-@media (max-width: 1024px) {  /* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {  /* Tablet */
   .navbar {
     padding: 10px 30px;
   }
@@ -271,14 +287,36 @@ footer hr {
   }
 }
 
-@media (max-width: 768px) {  /* Mobile */
+@media (max-width: 480px) {  /* Mobile */
   .navbar {
-    padding: 10px 20px;
+    padding: 1vw 6vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6.5vh;
+    display: flex;
+    z-index: 1000;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3vw;
+    z-index: 1000;
   }
 
   .logo img {
-    width: 80px;
+    width: 20vw;
   }
+
+  .nav-links-left,
+.nav-links-right {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 6vw
+}
 
   /* Hide the horizontal nav links and add the hamburger button */
   .nav-links {
@@ -288,9 +326,9 @@ footer hr {
   .hamburger {
     display: block;
     cursor: pointer;
-    width: 30px;
-    height: 3px;
-    background-color: white;
+    width: 8vw;
+    height: 0.7vw;
+    background-color: rgba(255, 255, 255, 0.8);
     position: relative;
   }
 
@@ -298,56 +336,61 @@ footer hr {
   .hamburger::after {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: white;
+    width: 8vw;
+    height: 0.7vw;
+    background-color: rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease-in-out;
   }
 
   .hamburger::before {
-    top: -8px;
+    top: -1.7vw;
   }
 
   .hamburger::after {
-    bottom: -8px;
+    bottom: -1.7vw;
   }
 
   /* On click: Toggle the nav-links */
   .navbar.active .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    gap: 6vw;
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
-    top: 70px;
+    top: 14.1vw;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    padding: 20px 0;
+    padding: 10vw 0;
     z-index: 999;
+    border-bottom-left-radius: 20vw ;
   }
 
   .navbar.active .hamburger::before {
-    transform: rotate(45deg);
-    top: 0;
+    top: -2.3vw;
   }
 
   .navbar.active .hamburger::after {
-    transform: rotate(-45deg);
-    bottom: 0;
+    bottom: -2.3vw;
   }
 
   /* Hero Section adjustments */
   .hero {
-    height: 70vh;
+    height: 100vh;
+    background: url('BG phone.png') no-repeat center center/cover;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    margin-top: 90vw;
+    font-size: 7vw;
   }
 
-  .hero-text p {
-    font-size: 1rem;
+  .hero-text-2 h1 {
+    font-size: 7vw;
+  }
+
+  .hero-text-2 p {
+    font-size: 4vw;
   }
 
   /* Footer adjustments */
