@@ -475,7 +475,7 @@ footer hr {
     width: 100vw; /* Ensure it covers the full screen width */
     padding: 5vw 0;
     z-index: 999;
-    border-bottom-right-radius: 20vw;
+    border-bottom-left-radius: 20vw;
 }
 
 
