@@ -398,3 +398,115 @@ footer hr {
     font-size: 0.75em;
   }
 }
+
+
+@media (max-width: 940px) and (orientation: landscape) {  /* Mobile */
+  .navbar {
+    padding: 1vw 6vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6.5vh;
+    display: flex;
+    z-index: 1000;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3vw;
+    z-index: 1000;
+  }
+
+  .logo img {
+    width: 20vw;
+  }
+
+  .nav-links-left,
+.nav-links-right {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 6vw
+}
+
+  /* Hide the horizontal nav links and add the hamburger button */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 8vw;
+    height: 0.7vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 8vw;
+    height: 0.7vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .hamburger::before {
+    top: -1.7vw;
+  }
+
+  .hamburger::after {
+    bottom: -1.7vw;
+  }
+
+  /* On click: Toggle the nav-links */
+  .navbar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    background: rgba(0, 0, 0, 0.7);
+    position: auto;
+    top: 14.1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 10vw 0;
+    z-index: 999;
+    border-bottom-left-radius: 20vw ;
+  }
+
+  .navbar.active .hamburger::before {
+    top: -2.3vw;
+  }
+
+  .navbar.active .hamburger::after {
+    bottom: -2.3vw;
+  }
+
+  /* Hero Section adjustments */
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-text h1 {
+    margin-top: 90vw;
+    font-size: 7vw;
+  }
+
+  .hero-text-2 h1 {
+    font-size: 7vw;
+  }
+
+  .hero-text-2 p {
+    font-size: 4vw;
+  }
+
+  /* Footer adjustments */
+  footer p {
+    font-size: 0.75em;
+  }
+}
