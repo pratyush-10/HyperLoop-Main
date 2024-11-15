@@ -357,7 +357,7 @@ footer hr {
     gap: 6vw;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
-    top: 14.1vw;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
