@@ -86,6 +86,7 @@
   }
 
   .nav-links a {
+    font-family: 'Goldman', sans-serif;
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -266,24 +267,62 @@
   }
 
   .social-media {
-    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
   }
-
+  
   .social-media a {
     margin: 0 10px;
   }
-
-  .social-media img {
-    width: 25px;
-  }
-
+  
   footer hr {
     border: 1px solid rgba(255, 255, 255, 0.767);
     width: 70%;
     margin: 8px auto;
   }
-
-  footer p {
-    font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.767);
+  
+  /* Social Media Icons - Individual Sizes and Hover Effects */
+  .icon-linkedin {
+    width: 25px;
+    transition: transform 0.3s;
+  }
+  
+  .icon-linkedin:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-twitter {
+    width: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .icon-twitter:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-instagram {
+    width: 27px;
+    transition: transform 0.3s;
+  }
+  
+  .icon-instagram:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-facebook {
+    width: 28px;
+    transition: transform 0.3s;
+  }
+  
+  .icon-facebook:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-youtube {
+    width: 32px;
+    transition: transform 0.3s;
+  }
+  
+  .icon-youtube:hover {
+    transform: scale(1.1);
   }
