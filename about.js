@@ -81,4 +81,8 @@ function initThreeJs() {
 
 // Call the 3D background setup function
 initThreeJs();
-  
+
+function toggleMenu() {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
+}
