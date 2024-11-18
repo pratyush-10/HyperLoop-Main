@@ -687,10 +687,10 @@ footer hr {
   
   /* Image styling */
   .institution img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 6vw;
-    margin-top: 5vw;
+    margin-top: -5vw;
   }
 
   /* Footer adjustments */
