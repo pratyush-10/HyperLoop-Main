@@ -1,4 +1,4 @@
-let container, scene, camera, renderer, particles = [], mouseX = 0, mouseY = 0;
+let container, scene, camera, renderer, particles = [], mouseX = 0, mouseY = 0, isMobile = false;
 
 init();
 animate();
@@ -45,9 +45,19 @@ function init() {
     particles = new THREE.Points(geometry, material);
     scene.add(particles);
 
-    // Event listeners
+    // Check if the device is mobile
+    isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile && window.DeviceOrientationEvent) {
+        // Add device orientation event listener for mobile
+        window.addEventListener('deviceorientation', onDeviceOrientation);
+    } else {
+        // Add mouse move listener for desktops
+        document.addEventListener('mousemove', onDocumentMouseMove);
+    }
+
+    // Event listener for window resize
     window.addEventListener('resize', onWindowResize);
-    document.addEventListener('mousemove', onDocumentMouseMove);
 }
 
 function onWindowResize() {
@@ -61,12 +71,20 @@ function onDocumentMouseMove(event) {
     mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 }
 
+function onDeviceOrientation(event) {
+    if (event.beta && event.gamma) {
+        // Map device orientation to rotation
+        mouseX = event.gamma / 90; // Normalize gamma (-90 to 90)
+        mouseY = event.beta / 180; // Normalize beta (-180 to 180)
+    }
+}
+
 function animate() {
     requestAnimationFrame(animate);
     particles.rotation.x += 0.002;
     particles.rotation.y += 0.002;
 
-    // Mouse interaction
+    // Interaction
     particles.rotation.x += (mouseY * 0.1 - particles.rotation.x) * 0.05;
     particles.rotation.y += (mouseX * 0.1 - particles.rotation.y) * 0.05;
 
@@ -76,4 +94,4 @@ function animate() {
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
-  }
+}
