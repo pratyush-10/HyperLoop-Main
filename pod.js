@@ -89,8 +89,8 @@ function onDeviceOrientation(event) {
     let gamma = event.gamma || 0;  // Default to 0 if gamma is null
 
     // Handle tilt based on device orientation
-    mouseX = (gamma / 90) * 3;   // gamma: left-right tilt
-    mouseY = -(beta / 90) * 3;   // beta: up-down tilt
+    mouseX = (gamma / 90) * 2;   // gamma: left-right tilt
+    mouseY = -(beta / 90) * 2;   // beta: up-down tilt
 }
 
 function animate() {
