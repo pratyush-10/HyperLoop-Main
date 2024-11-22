@@ -46,3 +46,8 @@ window.addEventListener('resize', () => {
 });
 
 animateParticles();
+
+function toggleMenu() {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
+}
