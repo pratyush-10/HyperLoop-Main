@@ -1,0 +1,270 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(-45deg, #000000, #000000, #000000, #161616);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  font-weight: bold;
+}
+
+
+
+section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 100px;
+  color:aliceblue;
+
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Main-title{
+  padding-top: 10vh;  
+  color: #fff;
+  font-size: 3.5em;
+  margin-bottom: 0px;
+  z-index: 222;
+  text-align: center;
+  
+}
+
+.content{
+  position: relative;
+  width: 1150px;
+  display: flex;
+  justify-content: center;
+}
+
+.content .image{
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.content .image img{
+  z-index: 111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content .text-box{
+  z-index: 222;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(80px);
+  padding: 40px;
+  max-width: 400px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  transform: translate(-80px, 50px);
+
+}
+
+.content .text-box h3{
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.content .text-box p{
+  font-size: 1em;
+}
+.media-icons{
+  margin-top: 100px;
+}
+
+.media-icons a{
+  color: #fff;
+  font-size: 2em;
+  margin: 60px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .Main-title {
+    padding-top: 25vw; 
+    font-size: 10vw; /* Adjusted font size for smaller screens */
+    margin-bottom: 10vw;
+  }
+
+  .content {
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Ensure content fits the screen */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content .image {
+    width: 80%; /* Adjust width to fit mobile screens */
+    height: 50vw; /* Maintain aspect ratio */
+    margin-bottom: -5vw; /* Add spacing between image and text box */
+  }
+
+  .content .text-box {
+    padding: 5vw; /* Reduced padding for better fit */
+    max-width: 70%; /* Adjust width to fit screen */
+    transform: translate(0, 0); /* Remove offset positioning */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .content .text-box h3 {
+    font-size: 5vw; /* Adjust font size */
+    margin-bottom: 3vw;
+  }
+
+  .content .text-box p {
+    font-size: 3.2vw; /* Adjust font size for smaller screens */
+  }
+
+  .media-icons {
+    margin-top: 5vw; /* Reduce spacing */
+    text-align: center; /* Center-align icons */
+  }
+
+  .media-icons a {
+    font-size: 2vw; /* Adjust icon size */
+    margin: 5vw; /* Reduce spacing between icons */
+  }
+}
+
+@media (min-width:481px) and (max-width: 1024px) {
+  
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 5vw; /* Reduced padding for smaller screens */
+  }
+
+  .Main-title {
+    padding-top: 20vw; 
+    font-size: 8vw; /* Adjusted font size for smaller screens */
+    margin-bottom: 10vw;
+  }
+
+  .content {
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Ensure content fits the screen */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content .image {
+    width: 80%; /* Adjust width to fit mobile screens */
+    height: 50vw; /* Maintain aspect ratio */
+    margin-bottom: -5vw; /* Add spacing between image and text box */
+  }
+
+  .content .text-box {
+    padding: 5vw; /* Reduced padding for better fit */
+    max-width: 70%; /* Adjust width to fit screen */
+    transform: translate(0, 0); /* Remove offset positioning */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .content .text-box h3 {
+    font-size: 5vw; /* Adjust font size */
+    margin-bottom: 3vw;
+  }
+
+  .content .text-box p {
+    font-size: 3vw; /* Adjust font size for smaller screens */
+  }
+
+  .media-icons {
+    margin-top: 5vw; /* Reduce spacing */
+    text-align: center; /* Center-align icons */
+  }
+
+  .media-icons a {
+    font-size: 2vw; /* Adjust icon size */
+    margin: 5vw; /* Reduce spacing between icons */
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+
+  body {
+    font-size: 1.5vw; /* Adjust base font size */
+  }
+
+  section {
+    padding: 5vw; /* Reduce padding for smaller landscape screens */
+  }
+
+  .Main-title {
+    padding-top: 10vw;
+    font-size: 4vw; /* Reduce font size */
+  }
+
+  .content {
+    width: 90%; /* Shrink content width */
+    display: flex; /* Ensure flexbox layout stays intact */
+    flex-direction: row; /* Keep elements side-by-side */
+    justify-content: space-between; /* Adjust spacing between media and text box */
+  }
+
+  .content .image {
+    width: 55vw; /* Reduce image width */
+    height: 25vw; /* Maintain aspect ratio */
+    overflow: hidden;
+  }
+
+  .content .image img {
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .content .text-box {
+    padding: 3vw; /* Reduce padding inside the box */
+    max-width: 35vw; /* Shrink the width of the text box */
+    transform: translate(-8vw, 0); /* Maintain position to the right of the media */
+  }
+
+  .content .text-box h3 {
+    font-size: 2vw; /* Reduce text size */
+  }
+
+  .content .text-box p {
+    font-size: 1.3vw; /* Reduce paragraph size */
+  }
+
+  .media-icons {
+    margin-top: 5vw; /* Reduce top margin */
+  }
+
+  .media-icons a {
+    font-size: 2vw; /* Shrink icon size */
+    margin: 3vw; /* Reduce spacing between icons */
+  }
+}
