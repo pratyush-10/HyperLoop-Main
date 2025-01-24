@@ -1,28 +1,3 @@
-/*code pop up animation
-document.addEventListener('DOMContentLoaded', () => {
-  const animateElements = document.querySelectorAll('[data-animate]');
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          observer.unobserve(entry.target); // Stop observing once animated
-        }
-      });
-    },
-    { threshold: 0.5 } // Trigger when 50% of the element is visible
-  );
-
-  animateElements.forEach((el) => observer.observe(el));
-});
-
-
-/*code pop up animation*/
-
-
-
-
 
 import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
@@ -112,7 +87,7 @@ let arrPositionModel = [
   {
     id: 'mid3',
     position: {x: 75, y: 0, z: 0},
-    rotation: {x: 0, y: 0.1286, z: 0}
+    rotation: {x: 0, y: 0.0200, z: 0}
   },
   {
     id: 'mid4',
@@ -181,3 +156,5 @@ function toggleMenu() {
   const navbar = document.querySelector('.navbar');
   navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
 }
+
+

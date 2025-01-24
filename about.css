@@ -21,6 +21,10 @@ body {
     height: 65vh;
   }
   
+  .midSection {
+    display: none; /* Hidden on desktop since the 3D model is used */
+  }
+
   .section2, .section3 {
     height: 8vh;
   }
@@ -82,3 +86,106 @@ body {
     z-index: 100;
     pointer-events: none;
 }
+
+
+/* General Mobile Styles */
+@media (max-width: 768px) { /* Target phones and small tablets */
+  body {
+    padding-top: 5em;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  .text-left, .text-right {
+    font-size: 1em;
+    max-width: 80%; /* Allow more space on smaller screens */
+    margin: auto;
+    text-align: justify; /* Center align text for better readability */
+  }
+
+  .text-left h1, .text-right h1 {
+    font-size: 1.5em; /* Smaller heading size */
+  }
+
+  .section1 {
+    padding-top: 60px; /* Reduce top padding for smaller screens */
+    height: auto; /* Allow the height to adjust dynamically */
+  
+  }
+
+
+
+  .segment {
+    height: auto; /* Dynamically adjust the height of all segments */
+    padding: 10px 0; /* Add vertical spacing between segments */
+  }
+
+  .section2, .section3, .mid1, .mid2, .mid3, .mid4 {
+    display: none;
+
+  }
+
+  #midSection {
+    display: flex; /* Display the mid-section */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background-image: url("assets/ttbg.png"); /* Add the background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    height: 20vh; /* Full viewport height for the section */
+  }
+
+  
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .text-left{
+    padding-left: 4em;
+  }
+
+  .text-left, .text-right {
+    font-size: 1.1em;
+    max-width: 80%; /* Slightly larger text block for tablets */
+  }
+
+  .section4 {
+    height: auto;
+  }
+  
+  .section2, .section3, .mid1, .mid2, .mid3, .mid4 {
+    display: none;
+
+  }
+
+  #midSection {
+    display: flex; /* Display the mid-section */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background-image: url("assets/ttbg.png"); /* Add the background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    height: 30vh; /* Full viewport height for the section */
+  }
+
+  .text-left h1, .text-right h1 {
+    font-size: 2em;
+  }
+
+  .text-right {
+    padding-bottom: -5vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  #container3D {
+    display: none; /* Hide the 3D model container */
+  }
+}
+

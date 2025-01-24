@@ -75,16 +75,8 @@ section img
   padding-top: 10vh;
   color: #fff;
   font-size: 10em;
-  z-index: 1;
+  z-index: 3;
 }
-
-
-
-#road
-{
-  z-index: 2;
-}
-
 #text1
 {
   padding-top: 30vh;
@@ -94,10 +86,113 @@ section img
   position: relative;
   color: #fff;
   font-size: 3em;
-  z-index: 1;
+  z-index: 5;
   height: 60vh;
 }
 
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+#moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/justpod.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+#mountain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/podmid.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+#road {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/floorr.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+}
 
 
+@media screen and (max-width: 1024px) {
+  #text {
+    font-size: 8em; /* Reduce heading size for tablets */
+    padding-bottom: 2em;
+  }
 
+  #text1 {
+    font-size: 2em;
+    padding-top: 20vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  #bg {
+    background-image: url("assets/bg11.png"); /* Change image */
+  }
+  #moon {
+    background-image: url("assets/justpod22.png"); /* Change image */
+  }
+  #mountain {
+    background-image: url("assets/podmid11.png"); /* Change image */
+  }
+  #road {
+    background-image: url("assets/floorr11.png"); /* Change image */
+  }
+}
+
+@media screen and (max-width: 768px) {  
+
+  body{
+    overflow-x: hidden !important;
+  }
+  #text {
+    font-size: 4em;
+    padding-bottom: 2em;
+  }
+
+  #text1 {
+    font-size: 1.5em;
+    padding-top: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  #bg {
+    background-image: url("assets/bg11.png"); /* Change image */
+  }
+  #moon {
+    background-image: url("assets/justpod11.png"); /* Change image */
+  }
+  #mountain {
+    background-image: url("assets/podmid11.png"); /* Change image */
+  }
+  #road {
+    background-image: url("assets/floorr11.png"); /* Change image */
+  }
+}
