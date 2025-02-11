@@ -24,14 +24,14 @@ loader.load('assets/eye.glb',
     console.log('Loaded Eye GLTF:', gltf);
     eye = gltf.scene;
     eye.position.y = 0;
-    eye.rotation.y = -1;
+    eye.rotation.y = 0.5;
     eye.rotation.x = 0;
-    eye.position.x = 100;
+    eye.position.x = 85;
     eye.rotation.z = 0;
     eye.position.z = 0;
-    eye.scale.x = 1.4;
-    eye.scale.y =  1.6;
-    eye.scale.z = 1.8;
+    eye.scale.x = 2;
+    eye.scale.y =  2;
+    eye.scale.z = 2;
     scene.add(eye);
   
 
@@ -66,44 +66,24 @@ reRender3D();
 let arrPositionModel = [
   {
     id: 'first',
-    position: {x: 100, y: 0, z: 0},
-    rotation: {x: 0, y: -1, z: 0}
+    position: {x: 85, y: 0, z: 0},
+    rotation: {x: 0, y: 0.5, z: 0}
   },
   {
     id: 'second',
-    position: {x: 94, y: 0, z: 0},
-    rotation: {x: 0, y: - 0.75, z: 0}
-  },
-  {
-    id: 'mid1',
-    position: {x: 88, y: 0, z: 0},
-    rotation: {x: 0, y: -0.48, z: 0}
-  },
-  {
-    id: 'mid2',
-    position: {x: 82, y: 0, z: 0},
-    rotation: {x: 0, y: -0.22, z: 0}
-  },
-  {
-    id: 'mid3',
-    position: {x: 75, y: 0, z: 0},
-    rotation: {x: 0, y: 0.0200, z: 0}
-  },
-  {
-    id: 'mid4',
-    position: {x: 65, y: 0, z: 0},
-    rotation: {x: 0, y: 0.2857, z: 0}
+    position: {x: 85, y: 0, z: 0},
+    rotation: {x: 0, y: 0, z: 0}
   },
   {
     id: 'third',
-    position: {x: 55, y: -2, z: 0},
-    rotation: {x: 0, y: 0.3429, z: 0}
+    position: {x: 85, y: 0, z: 0},
+    rotation: {x: 0, y: 0, z: 0}
   },
   {
     id: 'fourth',
-    position: {x: 45, y: -5, z: 0},
-    rotation: {x: 0, y: 0.55, z: 0}
-  },
+    position: {x: 85, y: 0, z: 0},
+    rotation: {x: 0, y: -0.5, z: 0}
+  }
 ];
 
 const modelMove = () => {
@@ -133,7 +113,7 @@ const modelMove = () => {
       x: new_coordinates.rotation.x,
       y: new_coordinates.rotation.y,
       z: new_coordinates.rotation.z,
-      duration: 1,
+      duration: 1.3,
       ease: "power1.out"
     })
 
@@ -156,19 +136,5 @@ function toggleMenu() {
   const navbar = document.querySelector('.navbar');
   navbar.classList.toggle('active');  // Toggles the 'active' class to show/hide the menu
 }
-document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.querySelector('.navbar');
-  let lastScrollY = window.scrollY;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-      // Scrolling down
-      navbar.classList.add('hidden');
-    } else {
-      // Scrolling up
-      navbar.classList.remove('hidden');
-    }
-    lastScrollY = window.scrollY;
-  });
-});
 

@@ -56,15 +56,11 @@
       </p>
     </div>
   </div>
-  <div class="segment section2" id = "second" data-scroll></div>
-  <div class="segment mid1" id = "mid1" data-scroll></div>
-  <div class="segment mid2" id = "mid2" data-scroll></div>
-  <div id="midSection">
-    
+  <div class="segment section2" id = "second" data-scroll>
+    <div id="container3D"></div>
   </div>
-  <div class="segment mid3" id = "mid3" data-scroll></div>
-  <div class="segment mid4" id = "mid4" data-scroll></div>
   <div class="segment section3" id = "third" data-scroll></div>
+  
 
 
   <div class="segment section4" id="fourth" data-scroll>
@@ -112,6 +108,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
       AOS.init(); // Initialize AOS
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const navbar = document.querySelector('.navbar');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down
+      navbar.classList.add('hidden');
+    } else {
+      // Scrolling up
+      navbar.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+});
   </script>
   
 

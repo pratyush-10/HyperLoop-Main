@@ -13,43 +13,50 @@ body {
 
   /* Add top padding to avoid navbar overlap */
   .section1 {
+    height: 55vh;
+    padding-top: 100px; /* Adjust this value to match the height of the navbar */
+  }
+
+  .section2 {
     height: 30vh;
-    padding-top: 80px; /* Adjust this value to match the height of the navbar */
+  }
+
+  .section3{
+    height: 30vh;
   }
   
   .section4 {
-    height: 65vh;
-  }
-  
-  .midSection {
-    display: none; /* Hidden on desktop since the 3D model is used */
+    height: 70vh;
   }
 
-  .section2, .section3 {
-    height: 8vh;
-  }
-  .mid1, .mid2, .mid3, .mid4{
-    height: 8vh
-  }
+  #container3D{
+    position: relative;
+    inset: 0;
+    /*background-color: #a32222;*/
+    z-index: 100;
+    pointer-events: none;
+}
+  
+  
+  
   
   .text-left {
-    font-size: 1.2em; /* Increase the font size */
+    font-size: 1.4em; /* Increase the font size */
     line-height: 1.6; /* Increase line spacing */
-    max-width: 50%;
+    max-width: 60%;
     text-align: justify;
-    margin-left: 5%;
+    margin-left: 20%;
     padding: 20px;
   
     
   }
   
   .text-right {
-    font-size: 1.2em; /* Increase the font size */
+    font-size: 1.4em; /* Increase the font size */
     line-height: 1.6; /* Increase line spacing */
-    max-width: 40%;
-    text-align: justify; /* Left-aligned text */
-    margin-left: auto;
-    margin-right: 5%;
+    max-width: 60%;
+    text-align: justify; 
+    margin-left: 20%;
     padding: 20px;
     
   }
@@ -64,7 +71,7 @@ body {
   }
   
   
-}
+
 
 
 /* Pop-in keyframes */
@@ -79,13 +86,7 @@ body {
   }
 }
 
-  #container3D{
-    position: fixed;
-    inset: 0;
-    /*background-color: #a32222;*/
-    z-index: 100;
-    pointer-events: none;
-}
+  
 
 
 /* General Mobile Styles */
