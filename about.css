@@ -100,9 +100,10 @@ body {
 
   .text-left, .text-right {
     font-size: 1em;
-    max-width: 80%; /* Allow more space on smaller screens */
-    margin: 2em;
+    max-width: 100%; /* Allow more space on smaller screens */
+    margin: 2.5em;
     text-align: justify; /* Center align text for better readability */
+    margin-left : 15%;
   }
 
   .text-left h1, .text-right h1 {
@@ -148,12 +149,16 @@ body {
   }
 
   .text-left{
-    padding-left: 4em;
+    padding-left: 0em;
   }
 
   .text-left, .text-right {
     font-size: 1.1em;
-    max-width: 80%; /* Slightly larger text block for tablets */
+    max-width: 60%; /* Slightly larger text block for tablets */
+  }
+
+  .section1 {
+    height : 35vh;
   }
 
   .section4 {
@@ -189,4 +194,56 @@ body {
     display: none; /* Hide the 3D model container */
   }
 }
+
+/* Landscape mode styles */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .section1 {
+    padding-top: 10px; /* Adjust padding for landscape */
+    height: 160vh; /* Allow dynamic height */
+  }
+
+  .text-left, .text-right {
+    font-size: 1.2em;
+    max-width: 55%; /* Adjust width for better spacing */
+    margin: 15%;
+  }
+
+  .text-left h1, .text-right h1 {
+    font-size: 1.8em;
+  }
+
+  .text-left {
+    margin-left : 25%;
+  }
+
+
+  .text-right {
+    margin-left : 20%;
+  }
+
+  #midSection {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-image: url("assets/ttbg.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* More height for landscape mode */
+  }
+
+  .section2, .section3, .mid1, .mid2, .mid3, .mid4 {
+    display: none; /* Make previously hidden sections visible */
+  }
+
+  #container3D {
+    display: none; /* Enable 3D container in landscape */
+  }
+}
+
 
